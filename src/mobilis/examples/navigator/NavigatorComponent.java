@@ -1,6 +1,5 @@
 package mobilis.examples.navigator;
 
-import mobilis.context.Context;
 import android.content.Intent;
 import android.os.RemoteException;
 import android.util.Log;
@@ -54,8 +53,8 @@ public class NavigatorComponent extends mobilis.impl.Component {
 	}
 
 	@Override
-	public boolean canOperateUnder(Context arg0) throws RemoteException {
-		return true;
+	public String getCategory() throws RemoteException {
+		return "mobilis.examples.navigator";
 	}
 
 }

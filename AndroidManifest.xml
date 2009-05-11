@@ -15,7 +15,7 @@
 				<category android:name="android.intent.category.LAUNCHER"></category>
 			</intent-filter>
 		</activity>
-		<activity android:name="mobilis.examples.navigator.puc.NavigatorPUCActivity">
+		<activity android:name="mobilis.examples.navigator.NavigatorPUCActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW"></action>
 				<category android:name="android.intent.category.LAUNCHER"></category>
@@ -23,12 +23,13 @@
 		</activity>
 		<service android:name="mobilis.examples.navigator.NavigatorComponentLoader">
 			<intent-filter>
+				<action android:name="mobilis.examples.navigator"></action>
 				<action android:name="loc"></action>
-				<action android:name="mobilis.examples.navigator.NavigatorComponent"></action>
 			</intent-filter>
 		</service>
-		<service android:name="mobilis.examples.navigator.puc.NavigatorPUCComponentLoader">
+		<service android:name="mobilis.examples.navigator.NavigatorPUCComponentLoader">
 			<intent-filter>
+				<action android:name="mobilis.examples.navigator"></action>
 				<action android:name="loc.br.rio.puc"></action>
 			</intent-filter>
 		</service>

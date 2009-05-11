@@ -1,4 +1,4 @@
-package mobilis.examples.navigator.puc;
+package mobilis.examples.navigator;
 
 import mobilis.app.R;
 import android.app.Activity;

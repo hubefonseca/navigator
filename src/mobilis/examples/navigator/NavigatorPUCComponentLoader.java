@@ -1,4 +1,4 @@
-package mobilis.examples.navigator.puc;
+package mobilis.examples.navigator;
 
 import java.util.List;
 
@@ -83,6 +83,11 @@ public class NavigatorPUCComponentLoader extends Service {
 		public void start() throws RemoteException {
 			component.setContextWrapper(getThis());
 			component.start();
+		}
+
+		@Override
+		public String getCategory() throws RemoteException {
+			return component.getCategory();
 		}
 		
 	};

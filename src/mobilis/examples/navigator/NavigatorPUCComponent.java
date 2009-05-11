@@ -1,6 +1,5 @@
-package mobilis.examples.navigator.puc;
+package mobilis.examples.navigator;
 
-import mobilis.context.Context;
 import mobilis.context.ExecutionScope;
 import android.content.Intent;
 import android.os.RemoteException;
@@ -61,9 +60,8 @@ public class NavigatorPUCComponent extends mobilis.impl.Component {
 	}
 
 	@Override
-	public boolean canOperateUnder(Context context) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+	public String getCategory() throws RemoteException {
+		return "mobilis.examples.navigator";
 	}
 	
 }

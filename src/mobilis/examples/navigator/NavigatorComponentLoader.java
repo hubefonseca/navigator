@@ -86,6 +86,11 @@ public class NavigatorComponentLoader extends Service {
 			component.start();
 		}
 		
+		@Override
+		public String getCategory() throws RemoteException {
+			return component.getCategory();
+		}
+		
 	};
 	
 	public NavigatorComponentLoader getThis() {
