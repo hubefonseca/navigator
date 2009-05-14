@@ -8,18 +8,6 @@ import android.util.Log;
 public class NavigatorComponent extends mobilis.impl.Component {
 
 	@Override
-	public void connected(String receptacleName) throws RemoteException {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void disconnected(String receptacleName) throws RemoteException {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void registerDependencies() throws RemoteException {
 		// TODO Auto-generated method stub
 		
@@ -39,7 +27,7 @@ public class NavigatorComponent extends mobilis.impl.Component {
 
 	@Override
 	public void start() throws RemoteException {
-		Log.d(this.getClass().getName(), "Navigator started!");
+		Log.d(this.getClass().getName(), "Navigator component started!");
 		
 		Intent intent = new Intent(contextWrapper, NavigatorActivity.class);
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

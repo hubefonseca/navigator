@@ -9,18 +9,6 @@ import android.util.Log;
 public class NavigatorPUCComponent extends mobilis.impl.Component {
 
 	@Override
-	public void connected(String receptacleName) throws RemoteException {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void disconnected(String receptacleName) throws RemoteException {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void registerDependencies() throws RemoteException {
 		// TODO Auto-generated method stub
 		
