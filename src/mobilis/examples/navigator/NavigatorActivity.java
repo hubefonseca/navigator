@@ -1,5 +1,5 @@
 package mobilis.examples.navigator;
-
+ 
 import java.util.List;
 
 import mobilis.app.R;
@@ -21,7 +21,7 @@ import com.google.android.maps.Overlay;
 
 public class NavigatorActivity extends MapActivity implements LocationListener {
 
-    private MapView mMapView;
+    private MapView mMapView; 
     private MapController mc;
     
     private GeoPoint p = null;

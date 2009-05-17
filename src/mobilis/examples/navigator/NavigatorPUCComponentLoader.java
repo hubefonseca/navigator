@@ -10,10 +10,9 @@ public class NavigatorPUCComponentLoader extends Service {
 
 	@Override
 	public IBinder onBind(Intent arg0) {
-		// TODO Auto-generated method stub
 		return mComponentManager;
 	}
 
-	private final ILocalLoader.Stub mComponentManager = new LocalLoader(new NavigatorComponent());
+	private final ILocalLoader.Stub mComponentManager = new LocalLoader(new NavigatorComponent(), this);
 	
 }

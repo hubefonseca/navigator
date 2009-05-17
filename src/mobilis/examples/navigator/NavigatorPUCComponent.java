@@ -1,6 +1,5 @@
 package mobilis.examples.navigator;
 
-import mobilis.context.ExecutionScope;
 import android.content.Intent;
 import android.os.RemoteException;
 import android.util.Log;
@@ -36,15 +35,7 @@ public class NavigatorPUCComponent extends mobilis.impl.Component {
 
 	@Override
 	public void stop() throws RemoteException {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void registerScope() throws RemoteException {
-		ExecutionScope executionScope = new ExecutionScope();
-		executionScope.setLatitude(-43.232467);
-		executionScope.setLongitude(-22.976253);
-		executionScope.setRadius(1E4);
+		Log.d(this.getClass().getName(), "Navigator PUC stopped!");
 	}
 
 	@Override
