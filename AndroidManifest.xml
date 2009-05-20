@@ -23,14 +23,21 @@
 		</activity>
 		<service android:name="mobilis.examples.navigator.NavigatorComponentLoader">
 			<intent-filter>
+				<action android:name="mobilis.examples.navigator.NavigatorComponent"></action>
 				<action android:name="mobilis.examples.navigator"></action>
 				<action android:name="loc"></action>
 			</intent-filter>
 		</service>
 		<service android:name="mobilis.examples.navigator.NavigatorPUCComponentLoader">
 			<intent-filter>
+				<action android:name="mobilis.examples.navigator.NavigatorPUCComponent"></action>
 				<action android:name="mobilis.examples.navigator"></action>
 				<action android:name="loc.br.rio.puc"></action>
+			</intent-filter>
+		</service>
+		<service android:name="mobilis.examples.navigator.NavService">
+			<intent-filter>
+				<action android:name="mobilis.examples.navigator.INavService"></action>
 			</intent-filter>
 		</service>
     </application>

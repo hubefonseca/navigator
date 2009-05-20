@@ -1,9 +1,8 @@
 package mobilis.examples.navigator;
 
-import mobilis.api.IReceptacle;
-import mobilis.api.IService;
 import mobilis.context.location.ISemanticLocationService;
 import android.content.Intent;
+import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
 
@@ -23,8 +22,7 @@ public class NavigatorComponent extends mobilis.impl.Component {
 
 	@Override
 	public void registerServices() throws RemoteException {
-		// TODO Auto-generated method stub
-		
+		registerService("navService", INavService.class.getName());
 	}
  
 	@Override
@@ -36,11 +34,10 @@ public class NavigatorComponent extends mobilis.impl.Component {
 			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			contextWrapper.startActivity(intent);
 			
-			IReceptacle receptacle = getReceptacle("semanticLocation");
-			IService service = receptacle.getConnection();
-			ISemanticLocationService semanticLocationProvicer = ISemanticLocationService.Stub.asInterface(service.getServiceImpl());
+			IBinder service = getBoundService("semanticLocation");
+			ISemanticLocationService semanticLocationProvider = ISemanticLocationService.Stub.asInterface(service);
 			
-			Log.i(this.getClass().getName(), "Semantic location: " + semanticLocationProvicer.getSemanticLocation());
+			Log.i(this.getClass().getName(), "Semantic location: " + semanticLocationProvider.getSemanticLocation());
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -49,7 +46,7 @@ public class NavigatorComponent extends mobilis.impl.Component {
 
 	@Override
 	public void stop() throws RemoteException {
-		Log.d(this.getClass().getName(), "Navigator component stopped!");
+		Log.i(this.getClass().getName(), "Navigator component stopped!");
 	}
 
 	@Override

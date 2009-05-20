@@ -13,6 +13,6 @@ public class NavigatorPUCComponentLoader extends Service {
 		return mComponentManager;
 	}
 
-	private final ILocalLoader.Stub mComponentManager = new LocalLoader(new NavigatorComponent(), this);
+	private final ILocalLoader.Stub mComponentManager = new LocalLoader(new NavigatorPUCComponent(), this);
 	
 }

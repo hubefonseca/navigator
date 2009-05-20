@@ -30,6 +30,7 @@ public class NavigatorPUCComponent extends mobilis.impl.Component {
 		Log.d(this.getClass().getName(), "Navigator PUC started!");
 		
 		Intent intent = new Intent(contextWrapper, NavigatorPUCActivity.class);
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		contextWrapper.startActivity(intent);
 	}
 
