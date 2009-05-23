@@ -2,7 +2,6 @@ package mobilis.examples.navigator;
  
 import java.util.List;
 
-import mobilis.app.R;
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationListener;
