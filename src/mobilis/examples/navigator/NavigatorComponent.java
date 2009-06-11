@@ -1,5 +1,6 @@
 package mobilis.examples.navigator;
 
+import mobilis.api.ComponentInfo;
 import mobilis.context.location.ISemanticLocationService;
 import android.content.Intent;
 import android.os.IBinder;
@@ -54,4 +55,19 @@ public class NavigatorComponent extends mobilis.impl.Component {
 		return "mobilis.examples.navigator";
 	}
 
+	@Override
+	public ComponentInfo getInternalState() {
+//		NavigatorState navState = new NavigatorState();
+		
+		ComponentInfo state = new ComponentInfo();
+		state.setMyInfo("i was a navigator");
+		return state;
+	}
+	
+	@Override
+	public void setInternalState(ComponentInfo state) {
+		Log.d(this.getClass().getName(), "component state received");
+		Log.d(this.getClass().getName(), state.getMyInfo());
+	}
+	 
 }
