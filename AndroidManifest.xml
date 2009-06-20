@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="mobilis.examples.navigator"
+      package="kaluana.examples.navigator"
       android:versionCode="1"
       android:versionName="1.0">
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
@@ -15,29 +15,29 @@
 				<category android:name="android.intent.category.LAUNCHER"></category>
 			</intent-filter>
 		</activity>
-		<activity android:name="mobilis.examples.navigator.NavigatorPUCActivity">
+		<activity android:name="kaluana.examples.navigator.NavigatorPUCActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW"></action>
 				<category android:name="android.intent.category.LAUNCHER"></category>
 			</intent-filter>
 		</activity>
-		<service android:name="mobilis.examples.navigator.NavigatorComponentLoader">
+		<service android:name="kaluana.examples.navigator.NavigatorComponentLoader">
 			<intent-filter>
-				<action android:name="mobilis.examples.navigator.NavigatorComponent"></action>
-				<action android:name="mobilis.examples.navigator"></action>
+				<action android:name="kaluana.examples.navigator.NavigatorComponent"></action>
+				<action android:name="kaluana.examples.navigator"></action>
 				<action android:name="loc"></action>
 			</intent-filter>
 		</service>
-		<service android:name="mobilis.examples.navigator.NavigatorPUCComponentLoader">
+		<service android:name="kaluana.examples.navigator.NavigatorPUCComponentLoader">
 			<intent-filter>
-				<action android:name="mobilis.examples.navigator.NavigatorPUCComponent"></action>
-				<action android:name="mobilis.examples.navigator"></action>
+				<action android:name="kaluana.examples.navigator.NavigatorPUCComponent"></action>
+				<action android:name="kaluana.examples.navigator"></action>
 				<action android:name="loc.br.rio.puc"></action>
 			</intent-filter>
 		</service>
-		<service android:name="mobilis.examples.navigator.NavService">
+		<service android:name="kaluana.examples.navigator.NavService">
 			<intent-filter>
-				<action android:name="mobilis.examples.navigator.INavService"></action>
+				<action android:name="kaluana.examples.navigator.INavService"></action>
 			</intent-filter>
 		</service>
     </application>
